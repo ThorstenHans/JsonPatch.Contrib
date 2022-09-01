@@ -6,15 +6,18 @@
   </PropertyGroup>
     <PropertyGroup>
         <PackageId>ThorstenHans.JsonPatch.Contrib</PackageId>
+        <Description>Small, yet handy additions to Microsoft.AspNetCore.JsonPatch</Description>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/ThorstenHans/JsonPatch.Contrib</RepositoryUrl>
         <Authors>Thorsten Hans</Authors>
         <PackageTags>JsonPatch</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile> 
     </PropertyGroup>
     <ItemGroup>
         <None Include="../../README.md" Pack="true" PackagePath="/"/>
+        <None Include="../../LICENSE" Pack="true"  PackagePath="/"/>
     </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.8" />
