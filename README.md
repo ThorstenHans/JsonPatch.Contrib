@@ -48,3 +48,11 @@ Invoking `Examples.Sample1()` will print the following string to the console:
     }
 ]
 ```
+
+## Install via `dotnet` CLI
+
+You can easily install the package using `dotnet` CLI:
+
+```bash
+dotnet add package ThorstenHans.JsonPatch.Contrib
+```
