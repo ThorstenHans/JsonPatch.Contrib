@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+    <PropertyGroup>
+        <PackageId>ThorstenHans.JsonPatch.Contrib</PackageId>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/ThorstenHans/JsonPatch.Contrib</RepositoryUrl>
+        <Authors>Thorsten Hans</Authors>
+        <PackageTags>JsonPatch</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.8" />
+  </ItemGroup>
+    <Target Name="BuildReleaseNotes" BeforeTargets="GenerateNuspec">
+        <PropertyGroup>
+        <PackageDescription>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/../../RELEASE-NOTES"))</PackageDescription>
+        </PropertyGroup>
+    </Target>
+</Project>
